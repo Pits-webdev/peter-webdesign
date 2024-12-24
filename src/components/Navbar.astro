@@ -1,0 +1,24 @@
+---
+const pages = [
+   { name: "Home", href: "/" },
+   { name: "Work", href: "/peter-webdesign/work" },
+   { name: "About", href: "/peter-webdesign/about" },
+   { name: "Contact", href: "/peter-webdesign/contact" },
+];
+---
+
+<header class="w-full h-14 border-b border-gray-200">
+   <nav class="flex items-center justify-between h-full max-w-7xl mx-auto">
+      <div><a href="/peter-webdesign">Logo</a></div>
+
+      <ul class="flex items-center space-x-8">
+         {
+            pages.map((page) => (
+               <li>
+                  <a href={page.href}>{page.name}</a>{" "}
+               </li>
+            ))
+         }
+      </ul>
+   </nav>
+</header>
