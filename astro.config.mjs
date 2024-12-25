@@ -5,6 +5,7 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://peter-webdesign.github.io',
+  site: 'https://Pits-webdev.github.io',
+  base: 'peter-webdesign',
   integrations: [tailwind()]
 });
