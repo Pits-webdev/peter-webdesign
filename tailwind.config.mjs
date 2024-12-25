@@ -15,6 +15,7 @@ export default {
 			},
 			fontFamily: {
 				Inter: "Inter, sans-serif",
+				Anton: "Anton, sans-serif",
 			},
 		},
 	},
