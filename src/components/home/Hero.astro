@@ -1,20 +1,31 @@
 ---
+import { Image } from "astro:assets";
 
+import HeroImg from "@assets/images/hero-img.jpg";
 ---
 
 <section class="w-full h-full px-5 sm:px-[2vw]">
    <div class="flex w-full h-[calc(100dvh-3.5rem)]">
       <div class="my-4 w-full">
-         <div class="h-2/5">
+         <div class="h-1/4">
             <h1 class="text-8xl text-center text-primary font-bold font-Anton">
-               Designer &
+               Designer & Developer
             </h1>
-            <h1 class="text-8xl text-center text-primary font-bold font-Anton">
-               Developer
-            </h1>
+
+            <p class="max-w-[1160px] text-center text-lg mx-auto mt-8">
+               Lorem ipsum dolor sit amet consectetur adipisicing elit.
+               Necessitatibus odio numquam ratione, et molestiae dignissimos
+               expedita! Fugit repellat ullam qui laboriosam consequatur vitae
+               veritatis sit, consectetur saepe facilis nam earum velit tempore
+               accusantium.
+            </p>
          </div>
-         <div class="h-3/5">
-            <div class="mt-">big image</div>
+         <div class="h-3/4">
+            <Image
+               class="object-cover w-full h-full"
+               src={HeroImg}
+               alt="Hero Image"
+            />
          </div>
       </div>
    </div>
