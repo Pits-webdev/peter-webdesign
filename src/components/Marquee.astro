@@ -1,0 +1,42 @@
+---
+
+---
+
+<div class="marquee-text">
+  <div class="marquee-track">
+    <span class="text-2xl">Javasript</span>
+    <span class="text-2xl">Typesript</span>
+    <span class="text-2xl">CSS</span>
+    <span class="text-2xl">Tailwind</span>
+    <span class="text-2xl">Sveltekit</span>
+    <span class="text-2xl">Astro</span>
+    <span class="text-2xl" aria-hdden="true">Javasript</span>
+    <span class="text-2xl" aria-hdden="true">Typesript</span>
+    <span class="text-2xl" aria-hdden="true">CSS</span>
+    <span class="text-2xl" aria-hdden="true">Tailwind</span>
+    <span class="text-2xl" aria-hdden="true">Sveltekit</span>
+    <span class="text-2xl" aria-hdden="true">Astro</span>
+  </div>
+</div>
+
+<style>
+  .marquee-text {
+    overflow: clip;
+  }
+  .marquee-track {
+    padding-left: 10rem;
+    display: flex;
+    gap: 10rem;
+    width: max-content;
+    animation: marquee 20s linear infinite;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translate(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+</style>

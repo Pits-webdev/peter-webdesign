@@ -1,32 +1,31 @@
 ---
-import { Image } from "astro:assets";
-
-import HeroImg from "@assets/images/hero-img.jpg";
+import Marquee from "@components/Marquee.astro";
 ---
 
-<section class="w-full h-full px-5 sm:px-[2vw]">
-   <div class="flex w-full h-[calc(100dvh-3.5rem)]">
-      <div class="my-4 w-full">
-         <div class="h-1/4">
-            <h1 class="text-8xl text-center text-primary font-bold font-Anton">
-               Designer & Developer
-            </h1>
+<section class="w-full h-full px-5 sm:px-[4vw] mt-4 sm:mt-8 lg:mt-16">
+   <div
+      class="max-w-[120rem] flex flex-col items-center text-center gap-y-8 shadow-md py-16 px-4 mx-auto rounded-3xl bg-secondary"
+   >
+      <span
+         class="md:text-3xl text-center bg-foreground text-secondary px-8 py-2 rounded-lg"
+         >Designer & Developer</span
+      >
+      <h1 class="font-Anton max-w-[55vw] leading-tight">
+         Your Brand’s Digital Partner made for Growth
+      </h1>
 
-            <p class="max-w-[1160px] text-center text-lg mx-auto mt-8">
-               Lorem ipsum dolor sit amet consectetur adipisicing elit.
-               Necessitatibus odio numquam ratione, et molestiae dignissimos
-               expedita! Fugit repellat ullam qui laboriosam consequatur vitae
-               veritatis sit, consectetur saepe facilis nam earum velit tempore
-               accusantium.
-            </p>
-         </div>
-         <div class="h-3/4">
-            <Image
-               class="object-cover w-full h-full"
-               src={HeroImg}
-               alt="Hero Image"
-            />
-         </div>
-      </div>
+      <p class="max-w-[60rem]">
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
+         odio numquam ratione, et molestiae dignissimos expedita! Fugit repellat
+         ullam qui laboriosam consequatur vitae veritatis sit.
+      </p>
+
+      <a
+         class="w-fit bg-accent px-16 py-2 md:py-4 rounded-lg"
+         href="/peter-webdesign/contact">Get started today</a
+      >
+   </div>
+   <div class="mt-24">
+      <Marquee />
    </div>
 </section>

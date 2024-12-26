@@ -1,15 +1,30 @@
 ---
+import { Image } from "astro:assets";
+import Logo from "../assets/logo.png";
+
 const pages = [
    { name: "Home", href: "/peter-webdesign" },
    { name: "Work", href: "/peter-webdesign/work" },
    { name: "About", href: "/peter-webdesign/about" },
-   { name: "Contact", href: "/peter-webdesign/contact" },
 ];
 ---
 
 <header class="w-full h-14 border-b border-gray-200">
    <nav class="flex items-center justify-between h-full max-w-7xl mx-auto">
-      <div><a class="text-primary" href="/peter-webdesign">Logo</a></div>
+      <div>
+         <a
+            class="text-foreground text-sm flex items-center space-x-3 font-bold"
+            href="/peter-webdesign"
+         >
+            <Image
+               class="filter invert"
+               src={Logo}
+               alt="Firma Logo PS"
+               loading={"eager"}
+            />
+            <span>Webdesign</span>
+         </a>
+      </div>
 
       <ul class="flex items-center space-x-8">
          {
@@ -19,6 +34,12 @@ const pages = [
                </li>
             ))
          }
+         <li>
+            <a
+               class="bg-foreground text-secondary px-8 py-2 rounded-lg"
+               href="/peter-webdesign/contact">Contact</a
+            >
+         </li>
       </ul>
    </nav>
 </header>
