@@ -35,3 +35,21 @@ h1 {
 p {
     font-size: clamp(0.875rem, 7.5vw + -2.5rem, 1.125rem);
 }
+
+/* Lenis scroll  */
+html.lenis,
+html.lenis body {
+    height: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: clip;
+}
+
+.lenis.lenis-smooth iframe {
+    pointer-events: none;
+}
