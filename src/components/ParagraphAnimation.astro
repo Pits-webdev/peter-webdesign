@@ -15,7 +15,11 @@
    let innerText = paragraph.textContent as string;
    paragraph.innerHTML = "";
 
-   const words = innerText.split(" ");
+   // Split on whitespace and filter out empty strings
+   const words = innerText
+      .trim()
+      .split(/\s+/)
+      .filter((word) => word.length > 0);
 
    for (const [index, word] of words.entries()) {
       let span = document.createElement("span");
