@@ -1,0 +1,45 @@
+---
+
+---
+
+<p id="paragraph" class="flex flex-wrap">
+   Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, fugiat cum
+   consequatur corporis dolorem accusantium tempore dolores! Placeat aliquam
+   eligendi cum vitae possimus earum quisquam!
+</p>
+
+<script>
+   import { scroll } from "motion";
+
+   const paragraph = document.querySelector("#paragraph") as HTMLElement;
+   let innerText = paragraph.textContent as string;
+   paragraph.innerHTML = "";
+
+   const words = innerText.split(" ");
+
+   for (const [index, word] of words.entries()) {
+      let span = document.createElement("span");
+      span.classList.add("mr-2");
+      span.textContent = word;
+      paragraph.appendChild(span);
+
+      let start = index / words.length;
+      let end = start + 1 / words.length;
+
+      //scroll text effect
+      scroll(
+         (progress: any) => {
+            let spanStyle = document.querySelector(
+               `#paragraph > span:nth-child(${index + 1})`,
+            ) as HTMLElement;
+
+            if (progress >= start && progress >= end) {
+               spanStyle.style.color = "#0c0a09";
+            } else {
+               spanStyle.style.color = "#b3b3b3";
+            }
+         },
+         { target: paragraph, offset: ["start 0.8", "start 0.3"] },
+      );
+   }
+</script>
