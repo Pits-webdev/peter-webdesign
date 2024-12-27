@@ -2,30 +2,35 @@
 import Marquee from "@components/Marquee.astro";
 ---
 
-<section class="w-full h-full px-5 sm:px-[4vw] mt-4 sm:mt-8 lg:mt-16">
+<section class="w-full h-[calc(100vh-3.5rem)] px-5 sm:px-[4vw]">
    <div
-      class="max-w-[120rem] flex flex-col items-center text-center gap-y-8 shadow-md py-16 px-4 mx-auto rounded-3xl bg-secondary"
+      class="w-full h-full grid grid-cols-1 grid-rows-[80%_auto] items-center justify-center"
    >
-      <span
-         class="md:text-3xl text-center bg-foreground text-secondary px-8 py-2 rounded-lg"
-         >Designer & Developer</span
+      <div
+         class="shadow-md rounded-3xl bg-secondary flex flex-col items-center justify-center gap-8 py-14 text-center"
       >
-      <h1 class="font-Anton max-w-[55vw] leading-tight">
-         Your Brand’s Digital Partner made for Growth
-      </h1>
+         <span
+            class="md:text-3xl text-center bg-foreground text-secondary px-8 py-2 rounded-lg"
+            >Designer & Developer</span
+         >
+         <h1 class="font-Anton max-w-[55vw]">
+            Your Brand’s Digital Partner made for Growth
+         </h1>
 
-      <p class="max-w-[60rem]">
-         Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
-         odio numquam ratione, et molestiae dignissimos expedita! Fugit repellat
-         ullam qui laboriosam consequatur vitae veritatis sit.
-      </p>
+         <p class="max-w-[60rem]">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Necessitatibus odio numquam ratione, et molestiae dignissimos
+            expedita! Fugit repellat ullam qui laboriosam consequatur vitae
+            veritatis sit.
+         </p>
 
-      <a
-         class="w-fit bg-accent px-16 py-2 md:py-4 rounded-lg"
-         href="/peter-webdesign/contact">Get started today</a
-      >
-   </div>
-   <div class="mt-24">
-      <Marquee />
+         <a
+            class="w-fit bg-accent px-16 py-2 md:py-4 rounded-lg inline-flex"
+            href="/peter-webdesign/contact">Get started today</a
+         >
+      </div>
+      <div class="w-full h-full flex items-center overflow-x-clip">
+         <Marquee />
+      </div>
    </div>
 </section>
